@@ -1,0 +1,89 @@
+main {
+  padding-top:30px;
+
+}
+
+body {
+  background: #000000 url(http://www.publicdomainpictures.net/pictures/60000/velka/gold-background-for-christmas.jpg);
+
+  /*-webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;*/
+
+
+}
+
+.showmore {
+  display: inline;
+}
+
+.logo {
+  margin-top: 5px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+
+}
+
+.navbar-brand {
+  margin-top: -65px;
+  margin-left: 85px;
+}
+
+.nav {
+  margin-top: -65px;
+  margin-left: 285px;
+
+}
+
+/*.jumbotron {
+  margin-top: 10px;
+  background: #000000 url(https://static1.squarespace.com/static/51c322cfe4b032aad705a0fc/t/572917c9e32140aa84e476b9/1462310859802/wallpapers-for-black-and-gold-gradient-background-1.jpg?format=1500w);
+
+}*/
+
+.jumbotron {
+  background:
+    /* top, transparent red, faked with gradient */
+    /*linear-gradient(
+      rgba(197, 179, 88, 0.3),
+      rgba(197, 179, 88, 0.3)
+    ),*/
+    /* bottom, image */
+    url(https://static1.squarespace.com/static/51c322cfe4b032aad705a0fc/t/572917c9e32140aa84e476b9/1462310859802/wallpapers-for-black-and-gold-gradient-background-1.jpg?format=1500w);
+
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+/*header .navbar {
+  border-radius:0;
+}*/
+
+.show-hide-message.ng-hide-remove {
+  -webkit-animation:zoomIn 0.3s both ease;
+  -moz-animation:zoomIn 0.3s both ease;
+  animation:zoomIn 0.3s both ease;
+}
+
+.spinner {
+  -webkit-animation:spin 1s infinite;
+  -moz-animation:spin 1s infinite;
+  animation:spin 1s infinite;
+}
+
+@keyframes spin {
+    from { transfrom:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  from { -webkit-transfrom:rotate(0deg); }
+  to { -webkit-transform:rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+  from { -moz-transfrom:rotate(0deg); }
+  to { -moz-transform:rotate(360deg); }

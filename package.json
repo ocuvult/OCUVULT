@@ -1,0 +1,26 @@
+{
+  "name": "ocuvult",
+  "version": "1.0.0",
+  "description": "ocuvult",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "ocuvult"
+  ],
+  "author": "Austin Magnuson",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.8",
+    "mongoose-title-case": "0.0.4",
+    "mongoose-validator": "^1.3.2",
+    "morgan": "^1.8.2",
+    "passport-twitter": "^1.0.4"
+  }
+}

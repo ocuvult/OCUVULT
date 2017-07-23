@@ -1,0 +1,68 @@
+<meta name="viewport" content="width=980">
+
+<div class= "jumbotron text-center" ng-show="main.loading">
+    <span class = "glyphicon glyphicon-repeat spinner"></span>
+    <p>Loading...</p>
+</div>
+
+<div class="row show-hide-message" ng-show="management.showMoreError">
+    <div class="alert alert-danger">{{ management.showMoreError }}</div>
+</div>
+
+<div class="panel panel-warning" style="width:30%; position: absolute; top: 350px; left: 400px;">
+
+  <div class="panel-heading">
+       <strong>Wallet</strong>
+  </div>
+  <table class="table">
+  <tr>
+
+      <th><img src="./assets/img/Asset 5.svg" style="width:30px;height:30px;" align=center>Ocuvult</th>
+
+  </tr>
+  <tr>
+
+       <td ng-show="main.isLoggedIn">$&nbsp{{ main.ocuvult }}</td>
+
+  </tr>
+
+  </table>
+</div>
+
+<br>
+
+<div style="position: absolute; top: 500px; left: 350px;">
+  <form action="https://formspree.io/austinlmagnuson@gmail.com"
+      method="POST">
+    <input type="text" name="name" value= "{{ main.username }}" readonly>
+    <input type="number" name="name"  placeholder= "amount">
+    <input type="text" name="name" placeholder= "username of reciever">
+    <input type="submit" value="Send">
+</form>
+</div>
+
+<div style="position: absolute; top: 550px; left: 400px;">
+<font size="2em"> Your send order will be ignored if you have insufficient funds.<br>
+  The reciever will have to log into a new session after waiting 1-2 minutes for your send order to complete.<br>
+</font>
+</div>
+
+<br>
+
+<div style="position: absolute; top: 650px; left: 500px;">
+  <form action="https://formspree.io/austinlmagnuson@gmail.com"
+      method="POST">
+    <input type="text" name="name" value= "{{ main.username }}" readonly>
+    <input type="submit" value="Buy">
+</form>
+</div>
+
+<div style="position: absolute; top: 700px; left: 400px;">
+<font size="2em">Send funds to the following address/addresses:<br> BTC: 16bSEwzHZwTNXzE9AbKsRyidH4k46FAPCg<br>
+  ETH: 0x3CA9e54CB2b7b889305405B1C08dac46Cc197b66 <br>
+  LTC: LdY6WMRXQeJJVzvxo2AYsmrcT7a3Q7dnxS
+  <br>and then click Buy. Ocuvult will be sent to the username of the account in the input form above after your payment has been <br>
+  confirmed and converted to Ocuvult using the rates at the top of this page.<br>
+  You will have to log out and log back in after waiting 1-2 minutes for this process to complete.
+</font>
+</div>
