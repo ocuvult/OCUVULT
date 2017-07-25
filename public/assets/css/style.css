@@ -14,6 +14,10 @@ body {
 
 }
 
+.glyphicon {
+    font-size: 50px;
+}
+
 .showmore {
   display: inline;
 }
