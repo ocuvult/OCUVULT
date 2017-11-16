@@ -68,7 +68,7 @@ var UserSchema = new Schema({
     // temporarytoken: { type: String, required: true },
     // resettoken: { type: String, required: false },
     permission: { type: String, required: true, default: 'user' },
-    ocuvult: { type: Number, required: true, default: 0.05 }
+    ocuvult: { type: Number, required: true, default: 0.0000001 }
 });
 
 // Middleware to ensure password is encrypted before saving user to database
