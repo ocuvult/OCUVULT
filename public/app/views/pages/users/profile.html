@@ -9,7 +9,7 @@
     <div class="alert alert-danger">{{ management.showMoreError }}</div>
 </div>
 
-<div class="panel panel-warning" style="width:30%; position: absolute; top: 450px; left: 400px;">
+<div class="panel panel-warning" style="position: absolute; top: 400px; left: 16%;">
 
   <div class="panel-heading">
        <strong>Wallet</strong>
@@ -17,12 +17,16 @@
   <table class="table">
   <tr>
 
-      <th><img src="./assets/img/Asset 5.svg" style="width:30px;height:30px;" align=center>Ocuvult</th>
-
-  </tr>
-  <tr>
-
-       <td ng-show="main.isLoggedIn">{{ main.ocuvult }}</td>
+      <th>
+       <div class="dropdown">
+         <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Your cryptocurrencies
+         <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+         <li><a href="#">(OCU) Ocuvult:&nbsp<img src="./assets/img/Asset 5.svg" style="width:40px;height:60px;" align=center alt="" />&nbsp&nbsp{{ main.ocuvult }}</li>
+         <li><a href="#">(ACT) ActionToken:&nbsp<img src="./assets/img/spot-actionspot.png" style="width:17px;height:25px;" align=center alt="" />&nbsp&nbsp{{ main.actiontoken }}</li>
+        </ul>
+      </div>
+     </th>
 
   </tr>
 
@@ -31,17 +35,18 @@
 
 <br>
 
-<div style="position: absolute; top: 600px; left: 350px;">
+<div style="position: absolute; top: 400px; left: 34.5%;">
   <form action="https://formspree.io/austinlmagnuson@gmail.com"
       method="POST">
-    <input type="text" name="name" value= "{{ main.username }}" readonly>
+    <input type="text" name="name" value= "{{ main.username }} (OCU)" readonly>
+    <input type="text" name="name" placeholder= "OCU/AT">
     <input type="number" step="any" name="name"  placeholder= "amount">
-    <input type="text" name="name" placeholder= "username/address">
+    <input type="text" name="name" placeholder= "address">
     <input type="submit" value="Send">
 </form>
 </div>
 
-<div style="position: absolute; top: 650px; left: 400px;">
+<div style="position: absolute; top: 450px; left: 34.5%;">
 <font size="2em">
   You will recieve a confirmation email asking if  you would like to send the funds to the user/address
   that you specified in the form above. <br> After you reply yes to the email the funds will be transferred.
@@ -51,17 +56,17 @@
 
 <br>
 
-<div style="position: absolute; top: 750px; left: 350px;">
+<div style="position: absolute; top: 600px; left: 34.5%;">
   <form action="https://formspree.io/austinlmagnuson@gmail.com"
       method="POST">
-    <input type="text" name="name" value= "{{ main.username }}" readonly>
+    <input type="text" name="name" value= "{{ main.username }} (OCU)" readonly>
     <input type="text" name="name" placeholder= "BTC/ETH/LTC">
     <input type="number" name="name" placeholder= "amount">
     <input type="submit" value="Buy">
 </form>
 </div>
 
-<div style="position: absolute; top: 800px; left: 400px;">
+<div style="position: absolute; top: 650px; left: 34.5%;">
 <font size="2em">Send Bitcoin, Ethereum, Or Litcoin to one of the following addresses:<br> BTC: 16bSEwzHZwTNXzE9AbKsRyidH4k46FAPCg<br>
   ETH: 0x3CA9e54CB2b7b889305405B1C08dac46Cc197b66 <br>
   LTC: LdY6WMRXQeJJVzvxo2AYsmrcT7a3Q7dnxS

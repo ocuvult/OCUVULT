@@ -102,6 +102,7 @@ angular.module('mainController', ['authServices', 'userServices'])
                 app.username = data.data.username;
                 app.useremail = data.data.email;
                 app.ocuvult = data.data.ocuvult;
+                app.actiontoken = data.data.actiontoken;
 
                 User.getPermission().then(function(data){
                     if (data.data.permission === 'admin' || data.data.permission === 'moderator') {

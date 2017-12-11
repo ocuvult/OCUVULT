@@ -76,7 +76,7 @@ module.exports = function(router) {
     });
 
     router.post('/authenticate', function(req, res) {
-      User.findOne({ username: req.body.username }).select('email username password ocuvult').exec(function(err, user) {
+      User.findOne({ username: req.body.username }).select('email username password ocuvult actiontoken').exec(function(err, user) {
         if (err) throw err;
 
         if (!user) {
@@ -90,7 +90,7 @@ module.exports = function(router) {
         	  res.json({ success: false, message: 'Could not authenticate password.'});
         	} else {
         	 // console.log('out');
-            var token = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult }, secret, {expiresIn: '900s'} );
+            var token = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult, actiontoken: user.actiontoken }, secret, {expiresIn: '900s'} );
         	  res.json({ success: true, message: 'User authenticated!', token: token });
         	}
           } else {
@@ -131,7 +131,7 @@ module.exports = function(router) {
             if (!user) {
                 res.json({ success: false, message: 'No user was found.' });
             } else {
-                var newToken = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult  }, secret, {expiresIn: '900s'});
+                var newToken = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult, actiontoken: user.actiontoken  }, secret, {expiresIn: '900s'});
                 res.json({ success: true, token: newToken });
             }
         });
@@ -156,6 +156,18 @@ module.exports = function(router) {
                res.json({ success: false, message: 'No user was found.' });
            } else {
                res.json({ success: true, ocuvult: user.ocuvult });
+           }
+
+        });
+    });
+
+    router.get('/actiontoken', function(req, res) {
+        User.findOne({ username: req.decoded.username }, function(err, user){
+           if (err) throw err;
+           if (!user) {
+               res.json({ success: false, message: 'No user was found.' });
+           } else {
+               res.json({ success: true, ocuvult: user.actiontoken });
            }
 
         });
@@ -232,6 +244,7 @@ module.exports = function(router) {
         if (req.body.username) var newUsername = req.body.username;
         if (req.body.email) var newEmail = req.body.email;
         if (req.body.ocuvult) var newOcuvult = req.body.ocuvult;
+        if (req.body.actiontoken) var newActiontoken= req.body.actiontoken;
         if (req.body.permission) var newPermission = req.body.permission;
         User.findOne({ username: req.decoded.username }, function(err, mainUser) {
             if (err) throw err;
