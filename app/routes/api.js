@@ -167,7 +167,7 @@ module.exports = function(router) {
            if (!user) {
                res.json({ success: false, message: 'No user was found.' });
            } else {
-               res.json({ success: true, ocuvult: user.actiontoken });
+               res.json({ success: true, actiontoken: user.actiontoken });
            }
 
         });
