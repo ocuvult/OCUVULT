@@ -41,7 +41,7 @@
     <input type="text" name="name" value= "{{ main.username }} (OCU)" readonly>
     <input type="text" name="name" placeholder= "OCU/ACT">
     <input type="number" step="any" name="name"  placeholder= "amount">
-    <input type="text" name="name" placeholder= "address">
+    <input type="text" name="name" placeholder= "username/address">
     <input type="submit" value="Send">
 </form>
 </div>
@@ -74,4 +74,12 @@
   confirmed and converted to Ocuvult using the rates at the top of this page.<br>
   It may take up to 24 hours for your order to process.
 </font>
+</div>
+
+<div style="position: absolute; top: 900px; left: 34.5%;">
+  <form action="https://formspree.io/austinlmagnuson@gmail.com"
+      method="POST">
+    <input type="text" name="name" value= "{{ main.username }} (OCU) (ADD)" readonly>
+    <input type="submit" value="Generate wallet address">
+</form>
 </div>
