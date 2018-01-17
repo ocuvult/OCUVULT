@@ -19,7 +19,7 @@ app.use('/api', appRoutes);
 //supress warning
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://connect:Liveconnect1@ds117913.mlab.com:17913/ocuvult', function(err) {
+mongoose.connect('mongodb://connect:Liveconnect1@ds239137.mlab.com:39137/ocuvult', function(err) {
     if (err) {
         console.log('Not connected to the database: ' + err);
     } else {
