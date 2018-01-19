@@ -104,6 +104,43 @@
 </svg>
 </a>
 
-<div class "page-header">
-    <h1 class="text-center" style="color:white">Welcome</h1>
-</div>
+
+
+<html>
+  <head>
+    <title>Ocuvult</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="javascripts/loanApp.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body ng-app="loanApp">
+    <div id='loans' class="container" ng-controller="loanController">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="clearfix">
+          <form ng-Submit="post()">
+            <input required type="text" class="form-control" placeholder="Your name" ng-model="newPost.created_by" />
+            <textarea required class="form-control" maxlength="200" rows="3" placeholder="Say something" ng-model="newPost.text"></textarea>
+            <input class="btn submit-btn pull-right" type="submit" value="➕ Create Loan" />
+          </form>
+          <div id="post-stream">
+            <h4>Loans</h4>
+                <div class="post" ng-repeat="post in posts | orderBy:'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'">
+                  <p>{{post.text}}</p>
+                  <br>
+                  <br>
+                  <br>
+                <small>Posted by @{{post.created_by}}</small>
+                <small class="pull-right">{{post.created_at | date:"h:mma 'on' MMM d, y"}}</small>
+                <br>
+                <p><input class="btn submit-btn pull-right" type="submit" value="💱 Fund Loan" /><p>
+                <br>
+
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

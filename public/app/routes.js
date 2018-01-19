@@ -24,6 +24,20 @@ var app = angular.module('appRoutes', ['ngRoute'])
          authenticated: false
      })
 
+     .when('/loans', {
+         templateUrl: 'app/views/pages/users/loans.html',
+         authenticated: true
+     })
+
+     // .when('/mining', {
+     //     templateUrl: 'app/views/pages/users/mining.html',
+     //     authenticated: false
+     // })
+
+     .when('/whitepaper', {
+         templateUrl: 'app/views/pages/whitepaper.html',
+     })
+
      .when('/logout', {
         templateUrl: 'app/views/pages/users/logout.html',
         authenticated: true
@@ -40,8 +54,7 @@ var app = angular.module('appRoutes', ['ngRoute'])
          templateUrl: 'app/views/pages/management/management.html',
          controller: 'managementCtrl',
          controllerAs: 'management',
-         authenticated: true,
-         permission: ['admin', 'moderator']
+         // permission: ['user', 'admin', 'moderator']
      })
 
      .when('/edit/:id', {
@@ -49,8 +62,15 @@ var app = angular.module('appRoutes', ['ngRoute'])
          controller: 'editCtrl',
          controllerAs: 'edit',
          authenticated: true,
-         permission: ['admin', 'moderator']
      })
+
+
+     .when('/createtoken', {
+         templateUrl: 'app/views/pages/users/createtoken.html',
+         controller: 'managementCtrl',
+         controllerAs: 'management',
+     })
+
 
     //  .when('/facebook/:token', {
     //      templateUrl: 'app/views/pages/users/social/social.html',
@@ -95,7 +115,7 @@ app.run(['$rootScope', 'Auth', '$location', 'User', function($rootScope, Auth, $
                  } else if (next.$$route.permission){
 
                      User.getOcuvult().then(function(data) {
-                         
+
                      });
 
                      User.getPermission().then(function(data) {

@@ -43,10 +43,10 @@
   <body ng-app="userApp" ng-controller="mainCtrl as main" ng-show="main.loadme" ng-cloak>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="logo">
-          <a href="/"><img src="./assets/img/Asset 5.svg" style="width:70px;height:70px;"><a>
+        <!-- <div class="logo">
+          <a href="/"><img src="./assets/img/Asset 5.svg" style="110px;height:124px;"><a>
 
-        </div>
+        </div> -->
 
         <div class="navbar-header">
           <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -56,62 +56,31 @@
             <span class="icon-bar"></span>
           </button> -->
 
-          <a class="navbar-brand"  href="/" style="color:white"><font size="5">O C U V U L T</font></a>
+          <!-- <a class="navbar-brand"  href="/" style="color:white"><font size="5">O C U V U L T</font></a> -->
         </div>
 
         <div id="navbar" class="navbar-collapse" >
           <ul class="nav navbar-nav">
-            <li><a ng-show="!main.isLoggedIn" href="/login"> <font size="3">Login</a></font></font></li>
-            <li><a ng-show="!main.isLoggedIn" href="/register"><font size="3">Register</a></font></li>
-            <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();">Logout</a></li>
-            <!-- <li><a ng-show="main.isLoggedIn && main.authorized" href="/management" >mgmt</a></li> -->
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li> -->
-            <li><a ng-show="main.isLoggedIn" href="/profile">{{ main.username }}'s Wallet </a> </li>
+            <li><a ng-show="!main.isLoggedIn" href="/login"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">🚪 Login&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
+            <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">🚪 Logout&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
+            <br>
+            <li><a ng-show="!main.isLoggedIn" href="/register"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">👛 Create Wallet&nbsp</p></a></font></li>
+            <li><a ng-show="main.isLoggedIn" href="/profile"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">👛 {{ main.username }}'s Wallet</p></a></font></li>
+            <br>
+            <li><a href="/createtoken"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">🤑 Create Token&nbsp</p></a></font></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+
+          <ul class="nav1 navbar-nav">
+            <li><a href="/whitepaper"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">📑 WhitePaper&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
+            <br>
+            <li><a href="/management"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">⛏ Mining Catalog </p></a></font></li>
+            <br>
+              <li><a href="/loans"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;">💸 View Loans&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
+          </ul>
+        </div>
     </nav>
 
     <div class="container theme-showcase" role="main">
-
-      <div class="tinted-image">
-      <div class="jumbotron">
-
-
-  &nbsp&nbsp&nbsp&nbsp&nbsp
-        <h2 class="text-center" style="color:black">Welcome</h2>
-        <font size="3em"><p class="text-center" style="color:white" >Ocuvult is a decentralized free market cryptocurrency and blockchain platform.</p></font>
-        <p class="text-center" style="color:gold" ><img src="./assets/img/Asset 5.svg" style="width:30px;height:30px;" align=center><font size="5.5em">1 = $2.00</font></p>
-        <!-- <p class="text-left" style="color:gold">ETH = $700</p>
-        <p class="text-center" style="color:gold">BTC = $3,500</p> -->
-        <!-- <p class="text-right" style="color:gold">ETH = $700</p>
-        <p class="text-left" style="color:gold">OCU = $100</p><p class="text-center" style="color:gold">BTC = $3,500</p> -->
-
-        <p class="text-center" style="color:gold">
-          <font size="5em">0.0002 BTC = <img src="./assets/img/Asset 5.svg" style="width:30px;height:30px;" align=center>1</font>
-          <span style="float:left;"><font size="5em">0.02 LTC = <img src="./assets/img/Asset 5.svg" style="width:30px;height:30px;" align=center>1</font></span>
-          <span style="float:right;"><font size="5em">0.004 ETH = <img src="./assets/img/Asset 5.svg" style="width:30px;height:30px;" align=center>1</font></span>
-        </p>
-
-        <!-- <font size="3em"><p class="text-center" style="color:white">( These rates are for purchasing premined Ocuvult and do not necessarily apply to it's free market value. )</p></font>
- -->
-
-
-
-
-      </div>
-    </div>
 
       <div ng-view></div>
 

@@ -1,15 +1,31 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+svg{
+  width: 600px;
+  height: 120px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-top: 250px;
+  margin-left: 300px;
+  background: black;
+  background-color:transparent !important;
+}
+
+
 main {
   padding-top:30px;
 
 }
 
 body {
-  background: #000000 url(http://www.publicdomainpictures.net/pictures/60000/velka/gold-background-for-christmas.jpg);
-
-  /*-webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;*/
+  background: #000000 url(https://cdn-images-1.medium.com/max/1600/1*FK5TuNES4Csi0PK_9_T3qA.gif) center no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 
 }
@@ -23,48 +39,45 @@ body {
 }
 
 .logo {
-  margin-top: 5px;
-  margin-left: 3px;
-  margin-bottom: 5px;
+  margin-top: 3.5%;
+  margin-left: 46.5%;
+
 
 }
 
-.navbar-brand {
+.navbar {
+  /*background-color: #FFFFFF;*/
+  background: #000000 url(https://raw.githubusercontent.com/MagnumSun/home/master/img/circle2.gif) center no-repeat;
+  background-size: 500px;
+  height: 250px;
+  /* border-color: blue; */
+
+  -webkit-box-shadow: -2px 8px 110px -8px rgba(0,34,255,1);
+  -moz-box-shadow: -2px 8px 110px -8px rgba(0,34,255,1);
+  box-shadow: -2px 8px 110px -8px rgba(0,34,255,1);
+  /*background-color:transparent !important;*/
+}
+
+/* .navbar-brand {
   margin-top: -65px;
   margin-left: 85px;
-}
+} */
 
 .nav {
-  margin-top: -65px;
-  margin-left: 285px;
+  position: absolute;
+  left: 10%;
+  top: 0%;
+  {text-decoration: none}
 
 }
 
-/*.jumbotron {
-  margin-top: 10px;
-  background: #000000 url(https://static1.squarespace.com/static/51c322cfe4b032aad705a0fc/t/572917c9e32140aa84e476b9/1462310859802/wallpapers-for-black-and-gold-gradient-background-1.jpg?format=1500w);
+.nav1 {
+  position: absolute;
+  right: 10%;
+  top: -1%;
+  {text-decoration: none}
 
-}*/
-
-.jumbotron {
-  background:
-    /* top, transparent red, faked with gradient */
-    /*linear-gradient(
-      rgba(197, 179, 88, 0.3),
-      rgba(197, 179, 88, 0.3)
-    ),*/
-    /* bottom, image */
-    url(https://static1.squarespace.com/static/51c322cfe4b032aad705a0fc/t/572917c9e32140aa84e476b9/1462310859802/wallpapers-for-black-and-gold-gradient-background-1.jpg?format=1500w);
-
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
 }
-
-/*header .navbar {
-  border-radius:0;
-}*/
 
 .show-hide-message.ng-hide-remove {
   -webkit-animation:zoomIn 0.3s both ease;
