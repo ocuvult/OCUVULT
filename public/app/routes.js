@@ -54,7 +54,7 @@ var app = angular.module('appRoutes', ['ngRoute'])
          templateUrl: 'app/views/pages/management/management.html',
          controller: 'managementCtrl',
          controllerAs: 'management',
-         // permission: ['user', 'admin', 'moderator']
+         permission: ['user', 'admin', 'moderator']
      })
 
      .when('/edit/:id', {
