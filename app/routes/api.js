@@ -131,7 +131,7 @@ module.exports = function(router) {
             if (!user) {
                 res.json({ success: false, message: 'No user was found.' });
             } else {
-                var newToken = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult, actiontoken: user.actiontoken  }, secret, {expiresIn: '900s'});
+                var newToken = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult, actiontoken: user.actiontoken }, secret, {expiresIn: '900s'});
                 res.json({ success: true, token: newToken });
             }
         });

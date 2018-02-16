@@ -74,9 +74,13 @@ body {
 .nav1 {
   position: absolute;
   right: 10%;
-  top: -1%;
+  top: 5%;
   {text-decoration: none}
 
+}
+
+ul {
+  list-style: none;
 }
 
 .show-hide-message.ng-hide-remove {

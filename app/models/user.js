@@ -70,7 +70,6 @@ var UserSchema = new Schema({
     permission: { type: String, required: true, default: 'user' },
     ocuvult: { type: Number, required: true, default: 0 },
     actiontoken: { type: Number, required: true, default: 0 }
-
 });
 
 // Middleware to ensure password is encrypted before saving user to database

@@ -30,10 +30,6 @@ angular.module('userServices', [])
         return $http.get('/api/ocuvult');
     };
 
-    userFactory.getActiontoken = function() {
-        return $http.get('/api/actiontoken');
-    };
-
     userFactory.getUsers = function() {
         return $http.get('/api/management/');
 

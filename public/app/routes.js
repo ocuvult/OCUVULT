@@ -25,8 +25,7 @@ var app = angular.module('appRoutes', ['ngRoute'])
      })
 
      .when('/loans', {
-         templateUrl: 'app/views/pages/users/loans.html',
-         authenticated: true
+         templateUrl: 'app/views/pages/loans.html',
      })
 
      // .when('/mining', {
@@ -69,6 +68,11 @@ var app = angular.module('appRoutes', ['ngRoute'])
          templateUrl: 'app/views/pages/users/createtoken.html',
          controller: 'managementCtrl',
          controllerAs: 'management',
+     })
+
+     .when('/forgot', {
+        templateUrl: 'app/views/pages/users/forgot.html',
+        authenticated: false
      })
 
 
