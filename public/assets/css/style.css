@@ -64,14 +64,14 @@ body {
 .nav {
   position: absolute;
   left: 0%;
-  top: 12%;
+  top: 0%;
   {text-decoration: none}
 
 }
 
 .nav1 {
   position: absolute;
-  right: 10%;
+  right: 1%;
   top: 5%;
   {text-decoration: none}
 
