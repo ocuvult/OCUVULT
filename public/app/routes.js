@@ -24,8 +24,8 @@ var app = angular.module('appRoutes', ['ngRoute'])
          authenticated: false
      })
 
-     .when('/loans', {
-         templateUrl: 'app/views/pages/loans.html',
+     .when('/orders', {
+         templateUrl: 'app/views/pages/orders.html',
      })
 
      // .when('/mining', {
@@ -33,8 +33,8 @@ var app = angular.module('appRoutes', ['ngRoute'])
      //     authenticated: false
      // })
 
-     .when('/whitepaper', {
-         templateUrl: 'app/views/pages/whitepaper.html',
+     .when('/stream', {
+         templateUrl: 'app/views/pages/stream.html',
      })
 
      .when('/logout', {
