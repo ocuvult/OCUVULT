@@ -80,18 +80,18 @@ module.exports = function(router) {
         if (err) throw err;
 
         if (!user) {
-          res.json({ success: false, message: 'Could not authenticate user'});
+          res.json({ success: false, message: 'Username not found'});
         } else {
           if (req.body.password) {
             var validPassword = user.comparePassword(req.body.password);
         	// Here you should be validating the password, since you have verified that it exists
         	if (!validPassword) {
         	 // console.log('in');
-        	  res.json({ success: false, message: 'Could not authenticate password.'});
+        	  res.json({ success: false, message: 'Incorrect password'});
         	} else {
         	 // console.log('out');
             var token = jwt.sign({ username: user.username, email: user.email, ocuvult: user.ocuvult, actiontoken: user.actiontoken }, secret, {expiresIn: '900s'} );
-        	  res.json({ success: true, message: 'User authenticated!', token: token });
+        	  res.json({ success: true, message: 'Welcome!', token: token });
         	}
           } else {
             res.json({ success: false, message: 'No password provided.'});
