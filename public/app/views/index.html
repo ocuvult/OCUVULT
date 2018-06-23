@@ -63,7 +63,7 @@
           <ul class="nav navbar-nav">
             <br>
             <li><a ng-show="!main.isLoggedIn" href="/login"><font size="5" color="white" style="text-decoration:none;"><p><img src="./assets/img/login.png" style="65px;height:65px;"> Login</p></a></font></li>
-            <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();"><font size="5" color="white"><p style="padding: 0.5em;"><img src="./assets/img/logout.png" style="65px;height:65px;"> Logout</p></a></font></li>
+            <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();"><font size="5" color="white"><p><img src="./assets/img/logout.png" style="65px;height:65px;"> Logout</p></a></font></li>
             <br>
             <li><a ng-show="!main.isLoggedIn" href="/register"><font size="5" color="white" style="text-decoration:none;"><p><img src="./assets/img/vault.png" style="65px;height:65px;"> Create Vault</p></a></font></li>
             <li><a ng-show="main.isLoggedIn" href="/profile"><font size="5" color="white" style="text-decoration:none;"><p><img src="./assets/img/vaultin.png" style="65px;height:65px;">  {{ main.username }}'s Vault</p></a></font></li>
@@ -98,7 +98,7 @@
             </div>
             <div class="modal-body">
               <p>{{ main.modalBody }}</p>
-              <div ng-show="main" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="./assets/img/ocuvult.gif"/> </div>
+              <div ng-show="main" > <img src="https://raw.githubusercontent.com/MagnumSun/home/master/img/circle2.gif" align="middle"> </div>
             </div>
             <div class="modal-footer">
               <button type="button" ng-hide="main.hideButton" ng-click="main.renewSession();" class="btn btn-default" data-dismiss="modal">Yes</button>
