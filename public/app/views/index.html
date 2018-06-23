@@ -61,24 +61,23 @@
 
         <div id="navbar" class="navbar-collapse" >
           <ul class="nav navbar-nav">
-            <li><a ng-show="!main.isLoggedIn" href="/login"><font size="5" color="white" style="text-decoration:none;"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;"><img src="./assets/img/login.png" style="60px;height:60px;"> Login&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
-            <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;"><img src="./assets/img/logout.png" style="60px;height:60px;"> Logout&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
             <br>
-            <li><a ng-show="!main.isLoggedIn" href="/register"><font size="5" color="white" style="text-decoration:none;"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;"><img src="./assets/img/vault.png" style="60px;height:60px;"> Create Vault&nbsp</p></a></font></li>
-            <li><a ng-show="main.isLoggedIn" href="/profile"><font size="5" color="white" style="text-decoration:none;"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;"><img src="./assets/img/vaultin.png" style="60px;height:60px;">  {{ main.username }}'s Vault</p></a></font></li>
-
+            <li><a ng-show="!main.isLoggedIn" href="/login"><font size="5" color="white" style="text-decoration:none;"><p><img src="./assets/img/login.png" style="65px;height:65px;"> Login</p></a></font></li>
+            <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout();"><font size="5" color="white"><p style="padding: 0.5em;"><img src="./assets/img/logout.png" style="65px;height:65px;"> Logout</p></a></font></li>
+            <br>
+            <li><a ng-show="!main.isLoggedIn" href="/register"><font size="5" color="white" style="text-decoration:none;"><p><img src="./assets/img/vault.png" style="65px;height:65px;"> Create Vault</p></a></font></li>
+            <li><a ng-show="main.isLoggedIn" href="/profile"><font size="5" color="white" style="text-decoration:none;"><p><img src="./assets/img/vaultin.png" style="65px;height:65px;">  {{ main.username }}'s Vault</p></a></font></li>
           </ul>
 
           <ul class="nav1 navbar-nav">
-            <li><a href="/orders" style="text-decoration:none;"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;"><img src="./assets/img/orders.png" style="60px;height:60px;"> Orders &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
+            <br>
+            <li><a href="/orders" style="text-decoration:none;"><font size="5" color="white"><p style="padding: 0.5em;"><img src="./assets/img/orders.png" style="65px;height:65px;"> Orders</p></a></font></li>
             <br>
             <br>
             <br>
             <br>
             <br>
-            <br>
-            <li><a href="/stream" style="text-decoration:none;"><font size="5" color="white"><p style="border:1px; border-style:solid; border-color:#4286f4; padding: 0.5em;"><img src="./assets/img/stream.png" style="60px;height:60px;"> Stream&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></a></font></li>
-
+            <li><a href="/stream" style="text-decoration:none;"><font size="5" color="white"><p style="padding: 0.5em;"><img src="./assets/img/stream.png" style="65px;height:65px;"> Stream</p></a></font></li>
           </ul>
         </div>
     </nav>
