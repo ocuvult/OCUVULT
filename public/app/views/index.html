@@ -3,6 +3,34 @@
 
 <!-- <meta name="viewport" content="initial-scale=1.0"> -->
 
+  <head>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+
+  <body>
+
+    <DIV style="position: absolute; top:55%; left:33%;">
+
+      <textarea id="dataChannelSend" disabled
+        placeholder="Press Start, enter some text, then press Send."></textarea>
+      <textarea id="dataChannelReceive" disabled></textarea>
+
+      <div id="buttons">
+        <button id="startButton">Start</button>
+        <button id="sendButton">Send</button>
+        <button id="closeButton">Stop</button>
+      </div>
+
+
+    </DIV>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
 
   <head>
     <base href="/">
@@ -33,6 +61,7 @@
 
     <script src="app/services/userServices.js"></script>
     <script src="app/services/authServices.js"></script>
+    <script src="assets/js/main.js"></script>
 
 
     <title>Ocuvult</title>
@@ -110,8 +139,6 @@
       </div>
 
     </div> <!-- /container -->
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
