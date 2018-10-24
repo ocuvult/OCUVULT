@@ -37,6 +37,10 @@ var app = angular.module('appRoutes', ['ngRoute'])
          templateUrl: 'app/views/pages/stream.html',
      })
 
+     .when('/api', {
+         templateUrl: 'app/views/pages/api.html',
+     })
+
      .when('/logout', {
         templateUrl: 'app/views/pages/users/logout.html',
         authenticated: true
