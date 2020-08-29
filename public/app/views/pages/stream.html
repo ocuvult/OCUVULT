@@ -1,9 +1,21 @@
 <html>
-  <head>
-    <script src='//cameratag.com/api/v14/js/cameratag.min.js' type='text/javascript'></script>
-    <link rel='stylesheet' href='//cameratag.com/static/14/cameratag.css'></link>
-  </head>
-  <body>
-    <camera id='DemoCamera' data-app-id='63f9c870-72c4-0130-04c5-123139045d73'></camera>
-  </body>
+<head>
+
+</head>
+<body>
+
+<video id ="vid" autoplay></video>
+
+<script>
+
+navigator.mediaDevices.getUserMedia({
+  video: true
+})
+.then(stream => {
+  document.getElementById("vid").srcObject = stream;
+})
+
+</script>
+
+</body>
 </html>
