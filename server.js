@@ -19,7 +19,7 @@ app.use('/api', appRoutes);
 //supress warning
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://connect:Liveconnect1@ds239137.mlab.com:39137/ocuvult', function(err) {
+mongoose.connect('mongodb://connect:Liveconnect1@ocuvult-shard-00-00.qqkxt.mongodb.net:27017,ocuvult-shard-00-01.qqkxt.mongodb.net:27017,ocuvult-shard-00-02.qqkxt.mongodb.net:27017/ocuvult?ssl=true&replicaSet=atlas-59z3j1-shard-0&authSource=admin&retryWrites=true&w=majority', function(err) {
     if (err) {
         console.log('Not connected to the database: ' + err);
     } else {
